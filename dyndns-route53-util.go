@@ -31,7 +31,7 @@ func main() {
 		return
 	}
 
-	if dns != ip {
+	if dns == ip {
 		fmt.Println("Nothing to do here.", host, " is up to date :", ip)
 		return
 	}
