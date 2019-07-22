@@ -21,7 +21,7 @@ func main() {
 
 	ip, ipErr := getIP()
 	if ipErr != nil {
-		fmt.Println("failed to look up current dns,", ipErr)
+		fmt.Println("failed to look up current ip,", ipErr)
 		return
 	}
 
@@ -62,7 +62,7 @@ func getDNS(host string) (string, error) {
 	addrs, err := net.LookupHost(host)
 	if err != nil {
 		fmt.Println("failed to look up current dns,", err)
-		return "", err
+		return "", nil
 	}
 
 	return addrs[0], nil
