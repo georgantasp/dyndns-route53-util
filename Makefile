@@ -10,6 +10,6 @@ BUILD_DIR=$(shell pwd)/build
 all:
 build: clean
 				mkdir -p $(BUILD_DIR)
-				cd ./src && GOOS=linux $(GOBUILD) -o $(BUILD_DIR)/$(BINARY_NAME) -v .
+				cd ./src && GOOS=linux GOARCH=arm GOARM=5 $(GOBUILD) -o $(BUILD_DIR)/$(BINARY_NAME) -v .
 clean: 
 				rm -rf $(BUILD_DIR)
