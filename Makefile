@@ -3,7 +3,7 @@ GOCMD=go
 GOBUILD=$(GOCMD) build
 GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
-BINARY_NAME=main
+BINARY_NAME=dyndns-route53-util
 PACKAGE_NAME=function.zip
 BUILD_DIR=$(shell pwd)/build
 
